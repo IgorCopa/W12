@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add End</title>
+</head>
+<body>
+
+
+    <script>
+
+        /* 
+            Parameter list	                    Return
+            [-3, 0, 7.1, 5]	                |   2
+            [17, 8, 9, 5, 20]	            |   37
+            [5, -2.1, 6.3, 9, 5, 13]	    |   18
+        */
+
+        let listOfNumbers = [17, 8, 9, 5, 20];
+        let val = addEnds(listOfNumbers);
+
+        function addEnds(list){
+            return list[0] + list[list.length - 1];
+        }
+
+        console.log(val);
+    
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Get Middle</title>
+</head>
+<body>
+    
+    <script>
+    
+        /* 
+            Parameter list	                        Return
+            [17, 8, 9, 5, 20]	               |    9
+            [12, 4, 8, 15, 17, 5, 20, 11]	   |    16
+        */
+
+        let listOfNumbers = [12, 4, 8, 15, 17, 5, 20, 11];
+        //let sortedListOfNumbers = listOfNumbers.sort(function(a, b){return a - b});
+        let val = getMiddle(listOfNumbers);
+
+        function getMiddle(list){
+            let isEven = false;
+            let lastIndex = list.length - 1;
+            if(list.length % 2 === 0){
+                isEven = true;
+                let middleIndex1 = Math.floor(lastIndex/2);
+                let middleIndex2 = middleIndex1 + 1;
+                let average = ((list[middleIndex1] + list[middleIndex2])/2);
+                return average;
+            } else {
+                let middleIndex = lastIndex/2;
+                return list[middleIndex];
+            }
+        }
+
+        console.log(val);
+    
+    </script>
+</body>
+</html>
